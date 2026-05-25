@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Coordination Lab — Option 2: Warm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rust:    #C05621;
+      --rust-lt: #FEF0E8;
+      --rust-dk: #9C4415;
+      --brown:   #2D1B0E;
+      --brown-m: #78442A;
+      --bg:      #FBF8F3;
+      --bg-alt:  #F3EDE3;
+      --border:  #E8DECE;
+      --muted:   #9C7B63;
+    }
+
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--brown); }
+    a { color: var(--rust); text-decoration: none; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg); border-bottom: 3px solid var(--rust);
+      display: flex; align-items: center; height: 64px;
+    }
+    .nav-inner {
+      max-width: 1100px; width: 100%; margin: 0 auto;
+      padding: 0 2.5rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-brand { font-size: 0.95rem; font-weight: 700; color: var(--brown); }
+    .nav-links { display: flex; gap: 0.2rem; }
+    .nav-links a {
+      font-size: 0.87rem; font-weight: 500; color: var(--brown-m);
+      padding: 0.35rem 0.85rem; border-radius: 5px; transition: background 0.15s, color 0.15s;
+    }
+    .nav-links a:hover { background: var(--rust-lt); color: var(--rust); }
+
+    /* Hero */
+    .hero {
+      max-width: 700px; margin: 0 auto;
+      padding: 4.5rem 2rem 6rem;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .logo-wrap {
+      background: #fff; border-radius: 16px; padding: 1.5rem 2rem;
+      box-shadow: 0 4px 24px rgba(45,27,14,0.08); margin-bottom: 2rem;
+    }
+    .logo-wrap img { width: 440px; max-width: 100%; display: block; }
+    .affil {
+      font-size: 0.85rem; color: var(--muted); margin-bottom: 2.5rem;
+      letter-spacing: 0.03em; font-weight: 400;
+    }
+    .hero p {
+      font-size: 1.05rem; color: #4A2E1A; line-height: 1.75;
+      margin-bottom: 0.85rem; max-width: 56ch;
+    }
+    .divider {
+      width: 40px; height: 3px; background: var(--rust);
+      border-radius: 2px; margin: 2rem auto; opacity: 0.7;
+    }
+    .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+    .btn {
+      padding: 0.6rem 1.4rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600;
+      font-family: 'DM Sans', sans-serif; text-decoration: none; transition: all 0.15s;
+    }
+    .btn-primary { background: var(--rust); color: #fff; border: 2px solid var(--rust); }
+    .btn-primary:hover { background: var(--rust-dk); border-color: var(--rust-dk); }
+    .btn-ghost { background: transparent; color: var(--brown); border: 2px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--brown-m); }
+
+    /* Footer */
+    footer {
+      background: var(--bg-alt); border-top: 1px solid var(--border);
+      padding: 2.25rem 2.5rem; margin-top: 4rem;
+    }
+    .foot-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    footer span { font-size: 0.82rem; color: var(--muted); }
+    .foot-links { display: flex; gap: 1.25rem; }
+    .foot-links a { font-size: 0.82rem; color: var(--muted); }
+    .foot-links a:hover { color: var(--rust); }
+
+    .version { position: fixed; bottom: 1rem; right: 1rem; background: var(--rust); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 20px; font-family: 'DM Sans', sans-serif; }
+
+    @media (max-width: 640px) {
+      .logo-wrap img { width: 260px; }
+      .nav-brand { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-brand">Social Coordination Lab</span>
+      <div class="nav-links">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join the Lab</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="logo-wrap">
+      <img src="assets/images/logo.png" alt="Social Coordination Lab">
+    </div>
+    <p class="affil">Department of Psychology and Neuroscience &nbsp;&middot;&nbsp; University of Tennessee, Knoxville</p>
+    <p>We study how people manage to coordinate their behavior with each other in ways that build deep and lasting social connections.</p>
+    <p>Most of life's greatest moments begin with a single positive social interaction — an impressive feat of coordination, adapting moment by moment to each other's words, expressions, and actions.</p>
+    <div class="divider"></div>
+    <div class="btns">
+      <a href="research.html" class="btn btn-primary">Our Research</a>
+      <a href="people.html" class="btn btn-ghost">Meet the Team</a>
+      <a href="join.html" class="btn btn-ghost">Join the Lab</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-inner">
+      <span>Social Coordination Lab &nbsp;&middot;&nbsp; University of Tennessee, Knoxville</span>
+      <div class="foot-links">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join</a>
+      </div>
+    </div>
+  </footer>
+
+  <span class="version">Option 2 — Warm</span>
+</body>
+</html>
